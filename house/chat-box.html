@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <style>
+    .chatbox {
+      width: 500px;
+      min-width: 390px;
+      height: 575px;
+      background: #bbb;
+      padding: 10px;
+      margin: 10px auto;
+      box-shadow: 0 3px #ccc;
+    }
+
+    .chatlogs {
+      display: flexbox;
+      padding: 10px;
+      margin-top: 0px;
+      width: 98%;
+      height: 450px;
+      background: #eee;
+      overflow-x: hidden;
+      overflow-y: scroll;
+    }
+
+    .chatlogs::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    .chatlogs::-webkit-scrollbar-thumb {
+      border-radius: 5px;
+      background: #bbb;
+    }
+
+    .chat {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: flex-start;
+      margin-bottom: 10px;
+    }
+
+    .chat .user-photo {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .chat .user-photo img {
+      width: 100%;
+    }
+
+    .chat .chat-message {
+      width: 80%;
+      padding: 8px;
+      margin: 5px 10px 0;
+      border-radius: 10px;
+      background: #fff;
+      color: black;
+      font-size: 14px;
+    }
+
+    .friend .chat-message {
+      background: #ddd;
+    }
+
+    .self .chat-message {
+      background: #f4eaaf;
+      order: -1;
+    }
+
+    .chat-form {
+      margin-top: 20px;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .chat-form textarea {
+      background: #fff;
+      width: 75%;
+      height: 30px;
+      border: 2px solid #eee;
+      border-radius: 5px;
+      resize: none;
+      padding: 5px;
+      font-size: 13px;
+      color: #333;
+    }
+
+    .chat-form textarea:focus {
+      background: #fff;
+    }
+
+    .chat-form textarea::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    .chat-form textarea::-webkit-scrollbar-thumb {
+      border-radius: 5px;
+      background: #fff;
+    }
+
+    .chat-form button {
+      background: #c4eadf;
+      padding: 5px 15px;
+      font-size: 20px;
+      color: #fff;
+      border: none;
+      margin: 0 10px;
+      border-radius: 10px;
+      box-shadow: 0 3px 0 #d4eacf;
+      cursor: pointer;
+      font-family: 'Roboto', sans-serif;
+      font-weight: bold;
+      -webkit-transition: background .2s ease;
+      -moz-transition: background .2s ease;
+      -o-transition: background .2s ease;
+    }
+
+    .close-button {
+      margin: 0;
+      padding: 0;
+    }
+
+    .close-button div {
+      width: 30px;
+      height: 30px;
+      margin-bottom: 5px;
+      background: #b5c7d6;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 3px 0 #b5a7b6;
+      cursor: pointer;
+      font-family: 'Roboto', sans-serif;
+      font-weight: bold;
+      -webkit-transition: background .2s ease;
+      -moz-transition: background .2s ease;
+      -o-transition: background .2s ease;
+    }
+
+    .chat-form button:hover {
+      background: #e4eabf;
+    }
+
+    .close-button div:hover {
+      background: #b5d7e6
+    }
+
+    .times i {
+      position: absolute;
+      margin-left: 8px;
+      margin-top: 6px;
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="mybutton">
+    <button class="button button--aylen button--round-l button--text-thick" style="border: 1px solid black; margin-left: 0px;
+    text-decoration: none;" onclick="openForm()">
+      chat with him
+    </button>
+  </div>
+
+  <!--this is the pop up chat box-->
+  <div class="chatbox" id="chatbox">
+
+    <!--this div element defines close popup chatbox action -->
+    <div class="close-button" role="button" onclick="closeForm()">
+      <div class="times cancel">
+        <i class="fas fa-times"></i>
+      </div>
+    </div>
+
+    <!--this div element defines several chat messages -->
+    <div class="chatlogs">
+      <div class="chat friend">
+        <div class="user-photo"><img src="profile-photo.jpg"></div>
+        <p class="chat-message">Lorem ipsum dolor sit amet.</p>
+      </div>
+
+      <div class="chat self">
+        <div class="user-photo"><img src="student-profile-photo.jpg"></div>
+        <p class="chat-message">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat rem culpa, aperiam voluptatibus, et modi deleniti repellendus corrupti itaque adipisci!</p>
+      </div>
+
+      <div class="chat friend">
+        <div class="user-photo"><img src="profile-photo.jpg"></div>
+        <p class="chat-message">Lorem ipsum dolor sit amet.</p>
+      </div>
+
+      <div class="chat self">
+        <div class="user-photo"><img src="student-profile-photo.jpg"></div>
+        <p class="chat-message">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat rem culpa, aperiam voluptatibus, et modi deleniti repellendus corrupti itaque adipisci!</p>
+      </div>
+
+      <div class="chat friend">
+        <div class="user-photo"><img src="profile-photo.jpg"></div>
+        <p class="chat-message">Lorem ipsum dolor sit amet.</p>
+      </div>
+
+      <div class="chat self">
+        <div class="user-photo"><img src="student-profile-photo.jpg"></div>
+        <p class="chat-message">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat rem culpa, aperiam voluptatibus, et modi deleniti repellendus corrupti itaque adipisci!</p>
+      </div>
+
+      <div class="chat friend">
+        <div class="user-photo"><img src="profile-photo.jpg"></div>
+        <p class="chat-message">Lorem ipsum dolor sit amet.</p>
+      </div>
+
+      <div class="chat self">
+        <div class="user-photo"><img src="student-profile-photo.jpg"></div>
+        <p class="chat-message">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat rem culpa, aperiam voluptatibus, et modi deleniti repellendus corrupti itaque adipisci!</p>
+      </div>
+
+      <div class="chat friend">
+        <div class="user-photo"><img src="profile-photo.jpg"></div>
+        <p class="chat-message">Lorem ipsum dolor sit amet.</p>
+      </div>
+
+      <div class="chat self">
+        <div class="user-photo"><img src="student-profile-photo.jpg"></div>
+        <p class="chat-message">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat rem culpa, aperiam voluptatibus, et modi deleniti repellendus corrupti itaque adipisci!</p>
+      </div>
+
+    </div>
+    <div class="chat-form">
+      <textarea name="name"></textarea>
+      <button>Send</button>
+    </div>
+  </div>
+
+  <script>
+    function openForm() {
+      var e = document.getElementById("chatbox");
+
+      e.style.display = ((e.style.display != "none") ? "none" : "block");
+    }
+
+      function closeForm() {
+        document.getElementById("chatbox").style.display = "none";
+      }
+  </script>
+
+</body>
+
+</html>
