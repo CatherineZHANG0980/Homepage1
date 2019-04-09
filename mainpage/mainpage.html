@@ -17,7 +17,7 @@
   <link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
   <link href="https://fonts.googleapis.com/css?family=Lato|Merriweather" rel="stylesheet">
 
-
+<link rel="stylesheet" href="welcomebox.css">
   <link rel="stylesheet" href="notification.css">
 
 </head>
@@ -65,8 +65,8 @@
         </li>
         <li><i class="material-icons">face</i></li>
       </ul>
-      <div class="chatbox" id="chatbox">
 
+      <div class="chatbox" id="chatbox">
         <!--this div element defines close popup chatbox action -->
         <div class="close-button" id="chatboxheader">
           <div class="times cancel" role="button" onclick="closeForm()">
@@ -145,25 +145,47 @@
           ocb.style.display = "block";
         }
       </script>
-      <div class="welcome">
-        <div class="form-container sign-in-container">
-          <form action="#">
-            <br>
-            <h1>Welcome to Reddi</h1>
-            <p>You can easily find accommodations and roommates here</p>
-            <div class="social-container">
-              <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-              <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-              <a href="#" class="social"><i class="fab fa-weixin"></i></a>
-            </div>
-            <span>or use your account</span>
-            <a href="#">Forgot your password?</a>
-            <button>Sign Up</button>
-            <br>
-            <button>Log In</button>
-          </form>
-        </div>
+      <!-- welcome box -->
+      <div class="mainbox" >
+<section class="user">
+  <div class="welcomebox-container">
+    <div class="welcomebox-text">
+      <div class="welcomebox-welcome">
+        <h class="welcomebox-title">Welcome to Reddi!</h>
+        <p class="welcomebox-intext">You can easily find accommodations and roommates here!</p>
+          <label for="signupchoice">Haven't signed up?</label>
+        <button class="signup-button" id="signupchoice">Sign up</button>
       </div>
+    </div>
+    <div class="welcomebox-signin">
+      <div class="user_forms-login">
+        <h2 class="forms_title">Login</h2>
+        <form class="forms_form">
+<!--     input field       -->
+          <fieldset class="forms_fieldset">
+            <div class="forms_field">
+              <input type="email" placeholder="Email" class="forms_field-input" required autofocus />
+            </div>
+            <div class="forms_field">
+              <input type="password" placeholder="Password" class="forms_field-input" required />
+            </div>
+          </fieldset>
+<!--      forgot pw button      -->
+          <div class="forms_buttons">
+              <input type="submit" value="Log In" class="forms_buttons-action">
+              <br>
+            <button type="button" class="forms_buttons-forgot">Forgot password?</button>
+          </div>
+        </form>
+<!--     close login form     -->
+      </div>
+    </div>
+    <!--   end of login session    -->
+  </div>
+<!--  end of black container  -->
+</section>
+</div>
+
     </section>
   </div>
 

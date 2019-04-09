@@ -23,13 +23,13 @@ section {
   width: 12rem;
   height: 12rem;
 }
-
+/* bg */
 .section-notification{
   align-items: baseline;
   padding-right: 0;
   padding-top: 10px;
   justify-content: flex-end;
-  background-image: url(./img2.jpg);
+  background-image: url(./images/home1.jpg);
   background-size: cover;
   background-attachment: fixed;
 }
@@ -1468,7 +1468,7 @@ div[slider] > input[type=range]::-ms-tooltip {
 }
 
 .endphoto {
-  background-image: url(./img3.jpg);
+  background-image: url(./images/home2.jpg);
   background-attachment: fixed;
   background-size: cover;
   background-position: center center;
