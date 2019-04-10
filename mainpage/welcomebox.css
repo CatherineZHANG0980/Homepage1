@@ -96,7 +96,7 @@
 .welcomebox-title {
   margin-bottom: 15px;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 27px;
   line-height: 1em;
 }
 
@@ -108,7 +108,9 @@
 
 .signup-button {
   margin-top: 30px;
+  margin-left:10px;
   border: 2px solid white;
+  border-color:white;
   border-radius: 3px;
   padding: 10px 30px;
   color: #fff;
