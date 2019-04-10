@@ -121,6 +121,7 @@ function boxes_click_display(){
     document.querySelectorAll(".box2")[3].style.display = "none";
     document.querySelectorAll(".box2")[4].style.display = "none";
     document.querySelectorAll(".box2")[5].style.display = "none";
+    document.querySelectorAll(".box2")[6].style.display = "none";
     document.querySelector(".cont_list_select_box").style.height = "0";
   }else{
     document.querySelectorAll(".box2")[0].style.display = "block";
@@ -129,6 +130,7 @@ function boxes_click_display(){
     document.querySelectorAll(".box2")[3].style.display = "block";
     document.querySelectorAll(".box2")[4].style.display = "block";
     document.querySelectorAll(".box2")[5].style.display = "block";
-    document.querySelector(".cont_list_select_box").style.height = "100px";
+    document.querySelectorAll(".box2")[6].style.display = "block";
+    document.querySelector(".cont_list_select_box").style.height = "200px";
   }
 }
