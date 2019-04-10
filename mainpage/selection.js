@@ -131,6 +131,6 @@ function boxes_click_display(){
     document.querySelectorAll(".box2")[4].style.display = "block";
     document.querySelectorAll(".box2")[5].style.display = "block";
     document.querySelectorAll(".box2")[6].style.display = "block";
-    document.querySelector(".cont_list_select_box").style.height = "200px";
+    document.querySelector(".cont_list_select_box").style.height = "130px";
   }
 }
