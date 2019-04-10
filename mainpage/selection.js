@@ -134,3 +134,20 @@ function boxes_click_display(){
     document.querySelector(".cont_list_select_box").style.height = "130px";
   }
 }
+
+var count_utibox_times = 0;
+var my_utibox_button = document.getElementById("utibox_times");
+function boxes_click_display2(){
+  count_utibox_times ++;
+  if(count_utibox_times % 2 ==0){
+    document.querySelectorAll(".box3")[0].style.display = "none";
+    document.querySelectorAll(".box3")[1].style.display = "none";
+    document.querySelectorAll(".box3")[2].style.display = "none";
+    document.querySelector(".cont_list_select_box2").style.height = "0";
+  }else{
+    document.querySelectorAll(".box3")[0].style.display = "block";
+    document.querySelectorAll(".box3")[1].style.display = "block";
+    document.querySelectorAll(".box3")[2].style.display = "block";
+    document.querySelector(".cont_list_select_box2").style.height = "130px";
+  }
+}
