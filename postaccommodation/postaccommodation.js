@@ -6,25 +6,15 @@ function showTab(n) {
     x[n].style.display = "block";
     if (n == 0) {
         document.getElementById("previous-button").style.display = "none";    //dont show the previous button on the first page
-        document.getElementById("confirm").style.display = "none";
     }
     else {
         document.getElementById("previous-button").style.display = "inline";
-        document.getElementById("confirm").style.display = "none";
     }
-    if (n == (x.length - 2)) {
+    if (n == (x.length - 1)) {
         document.getElementById("next-button").innerHTML = "Submit";       //may need to adjust this to send data to backend
-        document.getElementById("confirm").style.display = "none";
     }
-    else if(n==(x.length-1)){                                             //last page
-        document.getElementById("previous-button").style.display = "none";
-        document.getElementById("next-button").style.display = "none";
-        document.getElementById("confirm").style.display = "inline";
-        document.getElementById("confirm").onclick=function(){location.href='';}   //need to link to the main page
-    }
-    else {
+    else {                                             //last page        document.getElementById("previous-button").style.display = "none";
         document.getElementById("next-button").innerHTML = "Next";
-        document.getElementById("confirm").style.display = "none";
     }
     progressbarcnt(n)
 }
@@ -164,7 +154,3 @@ $fileInput.on('change', function() {
         $textContainer.text(filesCount + ' files selected');
     }
 });
-
-
-
-
