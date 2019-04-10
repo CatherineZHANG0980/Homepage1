@@ -1467,6 +1467,23 @@ div[slider] > input[type=range]::-ms-tooltip {
   margin-left: 130px;
 }
 
+.filterbutton{
+  background-color: darkviolet;
+  border-radius: 3px;
+  padding: 10px 35px;
+  item-align:center;
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  color: #fff;
+  text-transform: uppercase;
+  transition: background-color 0.2s ease-in-out;
+  opacity:0.9;
+}
+.filterbutton:hover{
+  opacity:1;
+}
+
 .endphoto {
   background-image: url(./images/home2.jpg);
   background-attachment: fixed;
